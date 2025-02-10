@@ -13,7 +13,7 @@ class HomeView extends GetView<HomeController> {
       backgroundColor: Colors.white,
       body: Center(
         child: ListView(
-          padding: EdgeInsets.symmetric(horizontal: 25.w),
+          padding: EdgeInsets.symmetric(horizontal: 35.w),
           shrinkWrap: true,
           children: [
             CircleAvatar(
@@ -32,8 +32,16 @@ class HomeView extends GetView<HomeController> {
             SizedBox(
               height: 40.h,
             ),
-            TextFormField(
-              decoration: textFieldTypes.textFieldAuth('Email'),
+            Wrap(
+              spacing: 25.h,
+              runSpacing: 25.h,
+              children: [
+                TextFieldDottedBorder(
+                    controller: controller.emailController, hintText: 'Email'),
+                TextFieldDottedBorder(
+                    controller: controller.passController,
+                    hintText: 'Password'),
+              ],
             )
           ],
         ),
