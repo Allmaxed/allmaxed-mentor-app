@@ -1,6 +1,6 @@
 name: mentors_app
 description: "A new Flutter project."
-publish_to: 'none' 
+publish_to: "none"
 version: 1.0.0+1
 
 environment:
@@ -30,7 +30,7 @@ flutter:
     - family: Formular
       fonts:
         - asset: assets/fonts/Formular.ttf
-          weight: 300            
+          weight: 300
         - asset: assets/fonts/Formular-Medium.ttf
           weight: 500
     - family: Poligon
@@ -39,6 +39,8 @@ flutter:
           weight: 300
         - asset: assets/fonts/Poligon-Thin.otf
           weight: 200
+        - asset: assets/fonts/Poligon-Regular.otf
+          weight: 400
         - asset: assets/fonts/Poligon-Medium.otf
           weight: 600
     - family: PP Monument Extended

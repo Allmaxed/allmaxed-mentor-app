@@ -13,7 +13,7 @@ class TextFieldTypes {
         borderRadius: BorderRadius.circular(15),
         borderSide: const BorderSide(color: Colors.white, width: .8),
       ),
-      contentPadding: const EdgeInsets.all(13),
+      contentPadding: const EdgeInsets.all(16),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(15),
         borderSide: const BorderSide(color: Colors.white, width: .8),
@@ -25,7 +25,7 @@ class TextFieldTypes {
       hintText: hintText,
       hintStyle: TextStyle(
         fontFamily: 'Formular',
-        fontSize: 15.sp,
+        fontSize: 14.sp,
         fontWeight: FontWeight.w500,
         color: Color(0xff3E1EFF),
       ),
@@ -55,7 +55,7 @@ class TextFieldDottedBorder extends StatelessWidget {
         decoration: textFieldTypes.textFieldAuth(hintText),
         style: TextStyle(
           fontFamily: 'Formular',
-          fontSize: 15.sp,
+          fontSize: 14.sp,
           fontWeight: FontWeight.w500,
           color: Color(0xff3E1EFF),
         ),
