@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class TextTitle {
+class FontTypes {
   Text logoTitle(String title) {
     return Text(
       title,
@@ -15,4 +15,10 @@ class TextTitle {
   }
 }
 
-final textTitle = TextTitle();
+final FontTypes textTitle = FontTypes();
+
+class FontStyles {
+  TextStyle formularMedium({required int size, required Color color}) {
+    return TextStyle();
+  }
+}

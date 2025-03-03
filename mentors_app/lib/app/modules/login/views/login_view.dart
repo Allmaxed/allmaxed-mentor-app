@@ -1,11 +1,11 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mentors_app/app/modules/home/widgets/buttons.dart';
 import 'package:mentors_app/app/modules/login/controllers/login_controller.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mentors_app/app/modules/consts/buttons.dart';
-import 'package:mentors_app/app/modules/consts/text-sizes.dart';
-import 'package:mentors_app/app/modules/consts/textfield-types.dart';
+import 'package:mentors_app/app/modules/consts/text_sizes.dart';
+import 'package:mentors_app/app/modules/consts/textfield_types.dart';
 import 'package:mentors_app/app/routes/app_pages.dart';
 
 class LoginView extends GetView<LoginController> {
@@ -60,7 +60,7 @@ class LoginView extends GetView<LoginController> {
                   text: "Not a Mentor Yet? ",
                   style: TextStyle(
                     fontFamily: 'Poligon',
-                    fontSize: 16.sp,
+                    fontSize: 17.sp,
                     fontWeight: FontWeight.w400,
                     color: Color(0xff686868),
                   ),
@@ -69,7 +69,7 @@ class LoginView extends GetView<LoginController> {
                       text: "Sign Up",
                       style: TextStyle(
                         fontFamily: 'Formular',
-                        fontSize: 20.sp,
+                        fontSize: 19.sp,
                         fontWeight: FontWeight.w600,
                         color: Color(0xff5D42FE),
                       ),
