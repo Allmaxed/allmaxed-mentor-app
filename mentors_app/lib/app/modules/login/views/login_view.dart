@@ -50,7 +50,11 @@ class LoginView extends GetView<LoginController> {
                       hintText: 'Password'),
                   Padding(
                     padding: EdgeInsets.only(top: 20.h),
-                    child: AuthButton(onPressed: () {}, buttonTitle: 'Login'),
+                    child: AuthButton(
+                        onPressed: () {
+                          Get.toNamed(Routes.HOME);
+                        },
+                        buttonTitle: 'Login'),
                   ),
                 ],
               ),
