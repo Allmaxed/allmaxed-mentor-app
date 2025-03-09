@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mentors_app/app/modules/home/widgets/buttons.dart';
+import 'package:mentors_app/app/modules/consts/buttons.dart';
 import 'package:mentors_app/app/modules/login/controllers/login_controller.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mentors_app/app/modules/consts/text_sizes.dart';
@@ -51,10 +51,12 @@ class LoginView extends GetView<LoginController> {
                   Padding(
                     padding: EdgeInsets.only(top: 20.h),
                     child: AuthButton(
-                        onPressed: () {
-                          Get.toNamed(Routes.HOME);
-                        },
-                        buttonTitle: 'Login'),
+                      onPressed: () {
+                        Get.toNamed(Routes.HOME);
+                      },
+                      buttonTitle: 'Login',
+                      fontSize: 22.sp,
+                    ),
                   ),
                 ],
               ),

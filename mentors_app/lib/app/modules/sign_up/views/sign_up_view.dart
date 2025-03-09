@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:mentors_app/app/modules/consts/text_sizes.dart';
 import 'package:mentors_app/app/modules/consts/textfield_types.dart';
-import 'package:mentors_app/app/modules/home/widgets/buttons.dart';
+import 'package:mentors_app/app/modules/consts/buttons.dart';
 import 'package:mentors_app/app/modules/sign_up/controllers/sign_up_controller.dart';
 import 'package:mentors_app/app/routes/app_pages.dart';
 
@@ -53,10 +53,14 @@ class SignUpView extends GetView<SignUpController> {
                       hintText: 'Phone No.'),
                   TextFieldDottedBorder(
                       controller: controller.referrelController,
-                      hintText: 'Referral Code (Optional)'),
+                      hintText: 'Password'),
                   Padding(
                     padding: EdgeInsets.only(top: 18.h),
-                    child: AuthButton(onPressed: () {}, buttonTitle: 'Sign Up'),
+                    child: AuthButton(
+                      onPressed: () {},
+                      buttonTitle: 'Sign Up',
+                      fontSize: 20.sp,
+                    ),
                   ),
                 ],
               ),

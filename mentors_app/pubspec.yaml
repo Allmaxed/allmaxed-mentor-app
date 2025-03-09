@@ -14,6 +14,8 @@ dependencies:
   get: ^4.6.6
   flutter_screenutil: ^5.9.3
   dotted_border: ^2.1.0
+  http: ^1.3.0
+  flutter_dotenv: ^5.2.1
 
 dev_dependencies:
   flutter_test:
@@ -24,7 +26,9 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+    - assets/json/
     - assets/images/
+    - .env
 
   fonts:
     - family: Formular
@@ -42,7 +46,11 @@ flutter:
         - asset: assets/fonts/Poligon-Regular.otf
           weight: 400
         - asset: assets/fonts/Poligon-Medium.otf
+          weight: 500
+        - asset: assets/fonts/Poligon-Semi-Bold.otf
           weight: 600
+        - asset: assets/fonts/Poligon-Bold.otf
+          weight: 700
     - family: PP Monument Extended
       fonts:
         - asset: assets/fonts/PPMonumentExtended-Regular.otf
