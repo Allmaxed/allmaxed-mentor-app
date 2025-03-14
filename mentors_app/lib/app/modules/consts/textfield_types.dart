@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -23,6 +25,12 @@ class TextFieldTypes {
         borderSide: const BorderSide(color: Colors.white, width: .8),
       ),
       hintText: hintText,
+      errorStyle: TextStyle(
+        fontFamily: 'Formular',
+        fontSize: 13.sp,
+        height: 2,
+        fontWeight: FontWeight.w500,
+      ),
       hintStyle: TextStyle(
         fontFamily: 'Formular',
         fontSize: 16.sp,
@@ -33,13 +41,15 @@ class TextFieldTypes {
   }
 }
 
-final textFieldTypes = TextFieldTypes();
-
 class TextFieldDottedBorder extends StatelessWidget {
   final TextEditingController controller;
+  FormFieldValidator<String>? validator;
   final String hintText;
-  const TextFieldDottedBorder(
-      {super.key, required this.controller, required this.hintText});
+  TextFieldDottedBorder(
+      {super.key,
+      required this.controller,
+      required this.hintText,
+      this.validator});
 
   @override
   Widget build(BuildContext context) {
@@ -53,6 +63,7 @@ class TextFieldDottedBorder extends StatelessWidget {
         controller: controller,
         cursorColor: Color(0xff5D42FE),
         decoration: textFieldTypes.textFieldAuth(hintText),
+        validator: validator,
         style: TextStyle(
           fontFamily: 'Formular',
           fontSize: 15.sp,
@@ -63,3 +74,5 @@ class TextFieldDottedBorder extends StatelessWidget {
     );
   }
 }
+
+final textFieldTypes = TextFieldTypes();

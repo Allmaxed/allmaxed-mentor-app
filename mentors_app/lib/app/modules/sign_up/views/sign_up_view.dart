@@ -16,82 +16,83 @@ class SignUpView extends GetView<SignUpController> {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 35.w, vertical: 30.h),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Expanded(child: SizedBox()),
-              CircleAvatar(
-                radius: 60.w,
-                backgroundColor: Colors.black,
-                child: CircleAvatar(
-                  radius: 58.w,
-                  backgroundColor: Colors.white,
-                  backgroundImage: AssetImage('assets/images/login-vector.png'),
+          padding: EdgeInsets.symmetric(
+            horizontal: 35.w,
+          ),
+          child: Center(
+            child: ListView(
+              shrinkWrap: true,
+              children: [
+                SizedBox(
+                  height: 30.h,
                 ),
-              ),
-              SizedBox(
-                height: 10.h,
-              ),
-              textTitle.logoTitle('Allmax\'d'),
-              SizedBox(
-                height: 30.h,
-              ),
-              Wrap(
-                alignment: WrapAlignment.center,
-                spacing: 17.h,
-                runSpacing: 17.h,
-                children: [
-                  TextFieldDottedBorder(
-                      controller: controller.nameController,
-                      hintText: 'Full Name'),
-                  TextFieldDottedBorder(
-                      controller: controller.emailController,
-                      hintText: 'Email ID'),
-                  TextFieldDottedBorder(
-                      controller: controller.phoneController,
-                      hintText: 'Phone No.'),
-                  TextFieldDottedBorder(
-                      controller: controller.referrelController,
-                      hintText: 'Password'),
-                  Padding(
-                    padding: EdgeInsets.only(top: 18.h),
-                    child: AuthButton(
-                      onPressed: () {},
-                      buttonTitle: 'Sign Up',
-                      fontSize: 20.sp,
-                    ),
+                CircleAvatar(
+                  radius: 60.w,
+                  backgroundColor: Colors.black,
+                  child: CircleAvatar(
+                    radius: 58.w,
+                    backgroundColor: Colors.white,
+                    backgroundImage:
+                        AssetImage('assets/images/login-vector.png'),
                   ),
-                ],
-              ),
-              Expanded(child: SizedBox()),
-              RichText(
-                text: TextSpan(
-                  text: "Already a Mentor? ",
-                  style: TextStyle(
-                    fontFamily: 'Poligon',
-                    fontSize: 18.sp,
-                    fontWeight: FontWeight.w400,
-                    color: Color(0xff686868),
-                  ),
-                  children: [
-                    TextSpan(
-                      text: "Login",
-                      style: TextStyle(
-                        fontFamily: 'Formular',
-                        fontSize: 20.sp,
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xff5D42FE),
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                FontTypes().logoTitle('Allmax\'d'),
+                SizedBox(
+                  height: 30.h,
+                ),
+                Form(
+                  key: controller.formKey,
+                  child: Wrap(
+                    alignment: WrapAlignment.center,
+                    spacing: 17.h,
+                    runSpacing: 17.h,
+                    children: [
+                      TextFieldDottedBorder(
+                          controller: controller.nameController,
+                          hintText: 'Full Name'),
+                      TextFieldDottedBorder(
+                          controller: controller.emailController,
+                          hintText: 'Email ID'),
+                      TextFieldDottedBorder(
+                          controller: controller.phoneController,
+                          hintText: 'Phone No.'),
+                      TextFieldDottedBorder(
+                          controller: controller.referrelController,
+                          hintText: 'Password'),
+                      Padding(
+                        padding: EdgeInsets.only(top: 18.h),
+                        child: AuthButton(
+                          onPressed: () {},
+                          buttonTitle: Text(
+                            'Sign Up',
+                            style: TextStyle(
+                              fontFamily: 'Poligon',
+                              fontSize: 20.sp,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
                       ),
-                      recognizer: TapGestureRecognizer()
-                        ..onTap = () => Get.toNamed(Routes.LOGIN),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              )
-            ],
+                SizedBox(
+                  height: 30.h,
+                ),
+              ],
+            ),
           ),
         ),
+      ),
+      bottomNavigationBar: FontTypes().bottomNavText(
+        preText: "Already a Mentor? ",
+        buttonText: "Login",
+        route: TapGestureRecognizer()..onTap = () => Get.offNamed(Routes.LOGIN),
+        preTextSize: 20,
+        buttonTextSize: 22,
       ),
     );
   }

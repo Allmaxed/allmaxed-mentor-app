@@ -3,13 +3,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AuthButton extends StatelessWidget {
   final VoidCallback onPressed;
-  final String buttonTitle;
-  final double fontSize;
-  const AuthButton(
-      {super.key,
-      required this.onPressed,
-      required this.buttonTitle,
-      required this.fontSize});
+  final Widget buttonTitle;
+  const AuthButton({
+    super.key,
+    required this.onPressed,
+    required this.buttonTitle,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -26,14 +25,7 @@ class AuthButton extends StatelessWidget {
         padding: EdgeInsets.symmetric(
             vertical: 12.h, horizontal: 75.w), // Button height
       ),
-      child: Text(
-        buttonTitle,
-        style: TextStyle(
-          fontFamily: 'Poligon',
-          fontSize: fontSize,
-          fontWeight: FontWeight.w600,
-        ),
-      ),
+      child: buttonTitle,
     );
   }
 }

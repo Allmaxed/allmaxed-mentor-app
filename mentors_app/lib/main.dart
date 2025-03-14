@@ -1,11 +1,14 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
+import 'package:mentors_app/app/data/consts/ssl_temp.dart';
 import 'package:mentors_app/app/modules/consts/theme.dart';
 import 'app/routes/app_pages.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() async {
+  HttpOverrides.global = MyHttpOverrides();
   WidgetsFlutterBinding.ensureInitialized();
   await dotenv.load(fileName: ".env");
   runApp(

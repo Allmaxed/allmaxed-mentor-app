@@ -6,4 +6,6 @@ class SignUpController extends GetxController {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController phoneController = TextEditingController();
   final TextEditingController referrelController = TextEditingController();
+  GlobalKey<FormState> formKey = GlobalKey();
+  var isLoading = false.obs;
 }
