@@ -24,12 +24,6 @@ final appTheme = ThemeData(
   ),
 );
 
-// final token = box.read('login_token');
-// final initRoute =
-//     (token == null || token == '') ? AppPages.INITIAL : Routes.HOME;
-
-// final initRoute = Routes.PRICING_PLAN;
-// const initRoute = Routes.HOME;
 class Themes {
   final appBarThemeLight = ThemeData.light().appBarTheme.backgroundColor;
 }

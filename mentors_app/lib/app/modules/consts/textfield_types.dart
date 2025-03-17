@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TextFieldTypes {
-  InputDecoration textFieldAuth(String hintText) {
+  InputDecoration textFieldAuth(String hintText, double padding) {
     return InputDecoration(
       focusedErrorBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(15),
@@ -15,7 +15,7 @@ class TextFieldTypes {
         borderRadius: BorderRadius.circular(15),
         borderSide: const BorderSide(color: Colors.white, width: .8),
       ),
-      contentPadding: const EdgeInsets.all(15),
+      contentPadding: EdgeInsets.all(padding),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(15),
         borderSide: const BorderSide(color: Colors.white, width: .8),
@@ -45,8 +45,10 @@ class TextFieldDottedBorder extends StatelessWidget {
   final TextEditingController controller;
   FormFieldValidator<String>? validator;
   final String hintText;
+  final double padding;
   TextFieldDottedBorder(
       {super.key,
+      this.padding = 15.0,
       required this.controller,
       required this.hintText,
       this.validator});
@@ -60,10 +62,16 @@ class TextFieldDottedBorder extends StatelessWidget {
       radius: Radius.circular(10), // Border radius
       dashPattern: [6, 3], // Dash gap pattern
       child: TextFormField(
+        keyboardType: (hintText == 'Phone No.')
+            ? TextInputType.phone
+            : (hintText == 'Email')
+                ? TextInputType.emailAddress
+                : TextInputType.text,
         controller: controller,
         cursorColor: Color(0xff5D42FE),
-        decoration: textFieldTypes.textFieldAuth(hintText),
+        decoration: TextFieldTypes().textFieldAuth(hintText, padding),
         validator: validator,
+        obscureText: (hintText == 'Confirm Password') ? true : false,
         style: TextStyle(
           fontFamily: 'Formular',
           fontSize: 15.sp,
@@ -74,5 +82,3 @@ class TextFieldDottedBorder extends StatelessWidget {
     );
   }
 }
-
-final textFieldTypes = TextFieldTypes();

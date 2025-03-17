@@ -1,16 +1,15 @@
-import 'package:flutter/gestures.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:flutter/material.dart';
+import 'package:mentors_app/app/modules/consts/buttons.dart';
 import 'package:mentors_app/app/modules/consts/form_validator.dart';
 import 'package:mentors_app/app/modules/consts/text_sizes.dart';
 import 'package:mentors_app/app/modules/consts/textfield_types.dart';
-import 'package:mentors_app/app/modules/consts/buttons.dart';
-import 'package:mentors_app/app/modules/sign_up/controllers/sign_up_controller.dart';
-import 'package:mentors_app/app/routes/app_pages.dart';
+import 'package:mentors_app/app/modules/sign_up/controllers/signup_details_controller.dart';
 
-class SignUpView extends GetView<SignUpController> with FormValidatorMixin {
-  const SignUpView({super.key});
+class PersonalDetailsView extends GetView<SignupDetailsController>
+    with FormValidatorMixin {
+  const PersonalDetailsView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -113,9 +112,7 @@ class SignUpView extends GetView<SignUpController> with FormValidatorMixin {
                         padding: EdgeInsets.only(top: 18.h),
                         child: AuthButton(
                           onPressed: () {
-                            if (controller.formKey.currentState!.validate()) {
-                              controller.registerButtonCall(context);
-                            }
+                            if (controller.formKey.currentState!.validate()) {}
                           },
                           buttonTitle: Text(
                             'Sign Up',
@@ -137,13 +134,6 @@ class SignUpView extends GetView<SignUpController> with FormValidatorMixin {
             ),
           ),
         ),
-      ),
-      bottomNavigationBar: FontTypes().bottomNavText(
-        preText: "Already a Mentor? ",
-        buttonText: "Login",
-        route: TapGestureRecognizer()..onTap = () => Get.offNamed(Routes.LOGIN),
-        preTextSize: 20,
-        buttonTextSize: 22,
       ),
     );
   }

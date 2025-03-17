@@ -1,0 +1,14 @@
+{
+  "token": "14|BNBXMyNg3q49Tbj6ZUh7pgicHn6euP8759bBooYG8165b853",
+  "message": "Successfully registered and logged in",
+  "user": {
+    "name": "Luka",
+    "email": "luka@domain.com",
+    "phone": "9027391029",
+    "status": "pending",
+    "type": "mentor",
+    "updated_at": "2025-03-14T19:05:37.000000Z",
+    "created_at": "2025-03-14T19:05:37.000000Z",
+    "id": 6
+  }
+}
