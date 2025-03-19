@@ -2,6 +2,7 @@
 
 import 'package:get/get.dart';
 import 'package:mentors_app/app/data/consts/token.dart';
+import 'package:mentors_app/app/modules/sign_up/views/profile_details_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/login/bindings/login_binding.dart';
@@ -15,7 +16,7 @@ class AppPages {
   AppPages._();
 
   static String get INITIAL =>
-      (!storageService.hasToken()) ? Routes.LOGIN : Routes.HOME;
+      (!storageService.hasToken()) ? Routes.SIGN_UP : Routes.HOME;
 
   static final routes = [
     GetPage(
@@ -30,7 +31,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.SIGN_UP,
-      page: () => const SignUpView(),
+      page: () => const ProfileDetailsView(),
       binding: SignUpBinding(),
     ),
   ];

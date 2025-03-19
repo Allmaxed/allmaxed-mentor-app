@@ -15,6 +15,29 @@ class FontTypes {
     );
   }
 
+  Text profileSubTitle(String title) {
+    return Text(
+      title,
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        fontFamily: 'Monument Extended',
+        fontSize: 16.sp,
+      ),
+    );
+  }
+
+  Text profileSubText(String title) {
+    return Text(
+      title,
+      textAlign: TextAlign.center,
+      style: TextStyle(
+          fontFamily: 'Poligon',
+          fontWeight: FontWeight.w400,
+          fontSize: 18.sp,
+          letterSpacing: -2),
+    );
+  }
+
   Padding bottomNavText({
     required String preText,
     required String buttonText,
