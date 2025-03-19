@@ -1,0 +1,1 @@
+/Users/allmaxd/Documents/GitHub/allmaxed-mentor-app/mentors_app/build/app/intermediates/cxx/Debug/2s6t4931/obj/arm64-v8a
