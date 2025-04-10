@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -13,20 +14,25 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
   await dotenv.load(fileName: ".env");
-  runApp(
-    ScreenUtilInit(
-      designSize: const Size(390, 850),
-      minTextAdapt: true,
-      splitScreenMode: true,
-      builder: (_, child) {
-        return GetMaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'Allmax\'d Mentors',
-          initialRoute: AppPages.INITIAL,
-          getPages: AppPages.routes,
-          theme: appTheme,
-        );
-      },
-    ),
-  );
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown, // Optional: Allow upside-down portrait
+  ]).then((_) {
+    runApp(
+      ScreenUtilInit(
+        designSize: const Size(390, 850),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: (_, child) {
+          return GetMaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'Allmax\'d Mentors',
+            initialRoute: AppPages.INITIAL,
+            getPages: AppPages.routes,
+            theme: appTheme,
+          );
+        },
+      ),
+    );
+  });
 }

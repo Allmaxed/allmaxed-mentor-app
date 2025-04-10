@@ -1,0 +1,2 @@
+/Users/allmaxd/Documents/GitHub/allmaxed-mentor-app/mentors_app/android/app/.cxx/Debug/2s6t4931/x86_64/CMakeFiles/edit_cache.dir
+/Users/allmaxd/Documents/GitHub/allmaxed-mentor-app/mentors_app/android/app/.cxx/Debug/2s6t4931/x86_64/CMakeFiles/rebuild_cache.dir
