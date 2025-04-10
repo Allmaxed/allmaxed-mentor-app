@@ -27,15 +27,9 @@ class SignUpView extends GetView<SignUpController> with FormValidatorMixin {
                 SizedBox(
                   height: 10.h,
                 ),
-                CircleAvatar(
-                  radius: 45.w,
-                  backgroundColor: Colors.black,
-                  child: CircleAvatar(
-                    radius: 43.w,
-                    backgroundColor: Colors.white,
-                    backgroundImage:
-                        AssetImage('assets/images/login-vector.png'),
-                  ),
+                Image.asset(
+                  'assets/images/logo-white-icon.png',
+                  width: 200,
                 ),
                 SizedBox(
                   height: 10.h,

@@ -27,15 +27,9 @@ class LoginView extends GetView<LoginController> with FormValidatorMixin {
                 SizedBox(
                   height: 30.h,
                 ),
-                CircleAvatar(
-                  radius: 66.w,
-                  backgroundColor: Colors.black,
-                  child: CircleAvatar(
-                    radius: 64.w,
-                    backgroundColor: Colors.white,
-                    backgroundImage:
-                        AssetImage('assets/images/login-vector.png'),
-                  ),
+                Image.asset(
+                  'assets/images/logo-white-icon.png',
+                  width: 200,
                 ),
                 SizedBox(
                   height: 10.h,

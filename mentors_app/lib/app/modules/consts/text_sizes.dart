@@ -42,7 +42,7 @@ class FontTypes {
                   // text: "Sign Up",
                   text: buttonText,
                   style: TextStyle(
-                    fontFamily: 'Formular',
+                    fontFamily: 'Sk Modernist',
                     fontSize: buttonTextSize.sp,
                     fontWeight: FontWeight.w600,
                     color: Color(0xff5D42FE),
